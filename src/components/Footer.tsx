@@ -49,8 +49,18 @@ export function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
-                    <p>&copy; {new Date().getFullYear()} UKIERI-VIT Exchange Program. All rights reserved.</p>
+                <div className="border-t border-gray-800 mt-12 pt-8">
+                    <div className="mb-8 text-xs text-gray-500 text-justify max-w-4xl mx-auto leading-relaxed">
+                        <p className="mb-4">
+                            This work was financially supported by the Scheme for Promotion of Academic and Research Collaboration (SPARC) and UK-India Education and Research Initiative (UKIERI) for providing the support through (File No.: SPARC-UKIERI/2024-2025/P3265) under “Building Research Capacities for Undergraduate and Masters Students”.
+                        </p>
+                        <p>
+                            Also, the authors would like to express their gratitude to Vellore Institute of Technology, Vellore, India and Heriot-Watt University, Scotland, UK for providing the necessary approvals and facilities to carry out this work.
+                        </p>
+                    </div>
+                    <div className="text-center text-sm text-gray-500">
+                        <p>&copy; {new Date().getFullYear()} UKIERI-VIT Exchange Program. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </footer>

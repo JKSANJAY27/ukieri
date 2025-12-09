@@ -16,11 +16,10 @@
   --color-vit-orange: #F37021;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode removed as per user request for professional white background */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 body {
