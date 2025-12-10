@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { LightboxProvider } from "@/components/ui/Lightbox";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,12 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-white text-gray-900 font-sans`}
       >
-        <Header />
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <div className="bg-noise" />
+        <LightboxProvider>
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </LightboxProvider>
       </body>
     </html>
   );

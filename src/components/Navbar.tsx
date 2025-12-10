@@ -66,13 +66,20 @@ export function Navbar() {
     return (
         <nav
             className={cn(
-                "sticky top-0 left-0 right-0 z-50 transition-all duration-300",
+                "fixed top-0 z-50 transition-all duration-500 ease-in-out flex justify-center",
                 isScrolled
-                    ? "bg-white/90 backdrop-blur-md shadow-sm py-2"
-                    : "bg-white py-4 border-b border-gray-100"
+                    ? "left-0 right-0 top-4"
+                    : "left-0 right-0"
             )}
         >
-            <div className="container mx-auto px-6 flex items-center justify-between">
+            <div
+                className={cn(
+                    "transition-all duration-500 ease-in-out flex items-center justify-between px-6",
+                    isScrolled
+                        ? "bg-white/80 backdrop-blur-lg shadow-xl rounded-full w-[90%] md:w-[80%] lg:w-[1200px] py-3 border border-white/20"
+                        : "bg-white/95 backdrop-blur-sm w-full py-4 border-b border-gray-100"
+                )}
+            >
                 <Link href="/" className="text-2xl font-bold tracking-tighter">
                     <span className="text-ukieri-blue">UKIERI</span>
                     <span className="text-ukieri-red">.VIT</span>
@@ -91,21 +98,27 @@ export function Navbar() {
                                 <button
                                     className={cn(
                                         "text-sm font-medium transition-colors flex items-center gap-1 py-2",
-                                        "text-gray-800 hover:text-ukieri-blue"
+                                        "text-gray-800 hover:text-[#012169]"
                                     )}
                                 >
-                                    {item.name}
+                                    <span className="relative">
+                                        {item.name}
+                                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-[#012169] via-[#C8102E] via-[#FF9933] to-[#138808] transition-all duration-300 group-hover:w-full"></span>
+                                    </span>
                                     <ChevronDown className="w-4 h-4" />
                                 </button>
                             ) : (
                                 <Link
                                     href={item.href!}
                                     className={cn(
-                                        "text-sm font-medium transition-colors hover:text-ukieri-blue py-2",
+                                        "text-sm font-medium transition-colors hover:text-[#012169] py-2",
                                         "text-gray-800"
                                     )}
                                 >
-                                    {item.name}
+                                    <span className="relative">
+                                        {item.name}
+                                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-[#012169] via-[#C8102E] via-[#FF9933] to-[#138808] transition-all duration-300 group-hover:w-full"></span>
+                                    </span>
                                 </Link>
                             )}
 

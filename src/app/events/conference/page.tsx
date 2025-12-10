@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ImageCard } from "@/components/ImageCard";
 
 export default function ConferencePage() {
@@ -25,34 +28,77 @@ export default function ConferencePage() {
     ];
 
     return (
-        <div className="container mx-auto px-6 py-12">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-                <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
-                    International Conference
-                </h1>
-                <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                    <span className="font-bold text-ukieri-blue">International Conference on Advanced Nanomaterials for Energy, Environment, and Healthcare (ANEH 2024)</span> <br />
-                    & <br />
-                    <span className="font-bold text-ukieri-red">UK-India Workshop on Hydrogen Generation and Storage</span><br />
-                    (UKIERI – SPARC & British Council)
-                </p>
+        <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
+            {/* Background Gradient */}
+            <div className="absolute top-0 right-0 w-[50vh] h-[50vh] bg-ukieri-blue/30 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 inline-block">
-                    <p className="font-medium text-gray-800">Organised jointly by Heriot-Watt University, UK and VIT, India</p>
-                    <p className="text-ukieri-blue font-bold mt-2">21-23, August 2024</p>
+            <div className="container mx-auto px-6 py-24 relative z-10">
+                <div className="grid lg:grid-cols-5 gap-16">
+                    {/* Left Column: Typography & Info */}
+                    <div className="lg:col-span-2 space-y-12">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <div className="inline-block px-4 py-2 bg-gradient-to-r from-ukieri-blue to-ukieri-red rounded-full text-xs font-bold tracking-wider mb-6">
+                                ANEH 2024
+                            </div>
+                            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8">
+                                Global <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Synergy</span>
+                            </h1>
+                            <p className="text-gray-400 text-lg leading-relaxed border-l-2 border-gray-700 pl-6">
+                                <strong className="text-white block mb-2">International Conference on Advanced Nanomaterials</strong>
+                                A premier gathering focused on Energy, Environment, and Healthcare, coupled with the UK-India Workshop on Hydrogen Generation.
+                            </p>
+                        </motion.div>
+
+                        <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10">
+                            <h3 className="text-xl font-bold mb-6">Key Statistics</h3>
+                            <div className="grid grid-cols-2 gap-8">
+                                <div>
+                                    <div className="text-3xl font-black text-ukieri-red mb-1">300+</div>
+                                    <div className="text-xs text-gray-500 uppercase tracking-widest">Delegates</div>
+                                </div>
+                                <div>
+                                    <div className="text-3xl font-black text-ukieri-blue mb-1">40+</div>
+                                    <div className="text-xs text-gray-500 uppercase tracking-widest">Speakers</div>
+                                </div>
+                                <div>
+                                    <div className="text-3xl font-black text-emerald-500 mb-1">62%</div>
+                                    <div className="text-xs text-gray-500 uppercase tracking-widest">Women</div>
+                                </div>
+                                <div>
+                                    <div className="text-3xl font-black text-orange-500 mb-1">21-23</div>
+                                    <div className="text-xs text-gray-500 uppercase tracking-widest">August '24</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column: Gallery Grid */}
+                    <div className="lg:col-span-3">
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {images.map((img, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                >
+                                    <ImageCard
+                                        src={img.src}
+                                        alt={img.alt}
+                                        title={`Highlight ${index + 1}`}
+                                        description={img.description}
+                                    />
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {images.map((img, index) => (
-                    <ImageCard
-                        key={index}
-                        src={img.src}
-                        alt={img.alt}
-                        description={img.description}
-                        title={`Conference Highlight ${index + 1}`}
-                    />
-                ))}
             </div>
         </div>
     );
