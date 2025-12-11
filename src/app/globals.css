@@ -5,17 +5,19 @@
   --foreground: #171717;
 }
 
-@theme inline {
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-ukieri-blue: #005EB8;
-  --color-ukieri-red: #D6001C;
+  --color-ukieri-red: #00A651;
+  /* Changed to Green for Clean Energy Theme */
   --color-vit-blue: #005EB8;
-  --color-vit-orange: #F37021;
+  --color-vit-orange: #00A651;
+  /* Changed to Green */
 
-  /* Indian Flag Colors */
+  /* Indian Flag Colors - Keeping for reference but overriding usage if needed */
   --color-india-saffron: #FF9933;
   --color-india-white: #FFFFFF;
   --color-india-green: #138808;
@@ -64,5 +66,5 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #012169, #C8102E, #FF9933, #138808);
+  background-image: linear-gradient(to right, #005EB8, #00A651);
 }

@@ -16,10 +16,18 @@ const navItems: NavItem[] = [
     {
         name: "About",
         children: [
-            { name: "Funding Agencies", href: "/about/funding-agencies" },
             { name: "About the Program", href: "/about/program" },
+            { name: "Funding Agencies", href: "/about/funding-agencies" },
             { name: "Collaborators", href: "/about/collaborators" },
         ],
+    },
+    {
+        name: "Research",
+        href: "/research",
+    },
+    {
+        name: "Opportunities",
+        href: "/opportunities",
     },
     {
         name: "Team",
@@ -31,8 +39,9 @@ const navItems: NavItem[] = [
     {
         name: "Events",
         children: [
+            { name: "News & Events", href: "/events" },
             { name: "International Conference", href: "/events/conference" },
-            { name: "Workshops", href: "/events/workshops" },
+            { name: "Workshops & Exchange", href: "/events/workshops" },
             { name: "Exchange Visits", href: "/events/visits" },
             { name: "Value Added Program", href: "/events/vap" },
         ],
@@ -103,7 +112,7 @@ export function Navbar() {
                                 >
                                     <span className="relative">
                                         {item.name}
-                                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-[#012169] via-[#C8102E] via-[#FF9933] to-[#138808] transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-[#005eb8] to-[#00A651] transition-all duration-300 group-hover:w-full"></span>
                                     </span>
                                     <ChevronDown className="w-4 h-4" />
                                 </button>
@@ -117,7 +126,7 @@ export function Navbar() {
                                 >
                                     <span className="relative">
                                         {item.name}
-                                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-[#012169] via-[#C8102E] via-[#FF9933] to-[#138808] transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-[#005eb8] to-[#00A651] transition-all duration-300 group-hover:w-full"></span>
                                     </span>
                                 </Link>
                             )}

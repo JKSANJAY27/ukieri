@@ -37,15 +37,15 @@ export function Hero() {
             className="relative min-h-[110vh] overflow-hidden bg-white selection:bg-ukieri-blue selection:text-white"
             onMouseMove={handleMouseMove}
         >
-            {/* Abstract Background Shapes using Flag Colors */}
+            {/* Abstract Background Shapes using Clean Energy Colors (Green/Blue) */}
             <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
                 <motion.div
                     style={{ x: moveX, y: moveY }}
-                    className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#012169] to-[#C8102E] blur-3xl"
+                    className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#005eb8] to-[#00A651] blur-3xl"
                 />
                 <motion.div
                     style={{ x: useTransform(moveX, (v) => -v), y: useTransform(moveY, (v) => -v) }}
-                    className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#138808] to-[#FF9933] blur-3xl"
+                    className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#00A651] to-[#005eb8] blur-3xl"
                 />
             </div>
 
@@ -65,35 +65,45 @@ export function Hero() {
                             </span>
                         </div>
 
-                        <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tighter mb-4 text-[#1a1a1a]">
-                            GREEN <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#138808] via-[#FF9933] to-[#C8102E]">
-                                HYDROGEN
+                        <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter mb-6 text-[#1a1a1a]">
+                            UK–India Partnership for <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#005eb8] to-[#00A651]">
+                                Sustainable Energy
                             </span>
                         </h1>
 
-                        <h2 className="text-2xl md:text-4xl font-light text-gray-600 mb-8 italic">
-                            The Fuel of the <span className="font-semibold text-[#012169]">Future</span>
+                        <h2 className="text-xl md:text-2xl font-medium text-gray-700 mb-8 max-w-2xl">
+                            Research Capacity Building in <span className="text-[#00A651] font-bold">Green Hydrogen</span> – The Fuel of the Future
                         </h2>
 
-                        <p className="text-lg text-gray-600 max-w-xl leading-relaxed mb-12 border-l-4 border-ukieri-blue pl-6">
-                            Building research capacities for undergraduate and masters students through
-                            hands-on training in catalyst validation and electrolytic hydrogen generation.
+                        <p className="text-lg text-gray-600 max-w-xl leading-relaxed mb-8 border-l-4 border-[#005eb8] pl-6">
+                            A pioneering UK–India collaboration advancing green hydrogen generation, storage, and workforce development. From cutting-edge research to real-world demonstrations and student exchanges — we are shaping the clean energy transition for a climate-resilient world.
                         </p>
 
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-4 mb-12">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="glass px-8 py-4 rounded-full text-[#012169] font-bold shadow-lg border-l-4 border-[#C8102E]"
+                                className="glass px-8 py-4 rounded-full text-[#005eb8] font-bold shadow-lg border-l-4 border-[#00A651]"
                             >
                                 UKIERI dotORG
                             </motion.div>
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="glass px-8 py-4 rounded-full text-[#138808] font-bold shadow-lg border-l-4 border-[#FF9933]"
+                                className="glass px-8 py-4 rounded-full text-[#00A651] font-bold shadow-lg border-l-4 border-[#005eb8]"
                             >
                                 SPARC India
                             </motion.div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-8 border-t pt-8 border-gray-200">
+                            <div>
+                                <h3 className="text-4xl font-black text-[#005eb8]">148+</h3>
+                                <p className="text-sm font-medium text-gray-500 uppercase tracking-wide">Hours Training</p>
+                            </div>
+                            <div>
+                                <h3 className="text-4xl font-black text-[#00A651]">25+</h3>
+                                <p className="text-sm font-medium text-gray-500 uppercase tracking-wide">Students Involved</p>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
@@ -138,7 +148,7 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity }}
             >
                 <span className="text-xs uppercase tracking-widest text-gray-400">Scroll to Explore</span>
-                <div className="w-px h-12 bg-gradient-to-b from-[#012169] to-[#FF9933]" />
+                <div className="w-px h-12 bg-gradient-to-b from-[#005eb8] to-[#00A651]" />
             </motion.div>
         </section>
     );

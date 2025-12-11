@@ -82,6 +82,33 @@ export default function Collaborators() {
                         </div>
                     </motion.div>
                 </div>
+
+                {/* Industry and Government Engagement */}
+                <div className="mt-32">
+                    <h2 className="text-3xl md:text-5xl font-black text-center mb-16 text-gray-900">
+                        Industry & Government <span className="text-[#005eb8]">Engagement</span>
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            { name: "Empereal-KGDS Renewable Energy", role: "Industrial Partner", color: "border-green-500 text-green-600" },
+                            { name: "PlusZero, Logan Energy, FLEXERGY", role: "Clean Energy Innovators", color: "border-blue-500 text-blue-600" },
+                            { name: "Connected Places Catapult", role: "Innovation Catalyst", color: "border-purple-500 text-purple-600" },
+                            { name: "Tamil Nadu Government", role: "Policy Outreach", color: "border-orange-500 text-orange-600" }
+                        ].map((partner, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 }}
+                                className={`bg-gray-50 p-8 rounded-xl border-t-4 ${partner.color} shadow-lg hover:shadow-xl transition-all`}
+                            >
+                                <h3 className="text-xl font-bold text-gray-800 mb-2">{partner.name}</h3>
+                                <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">{partner.role}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

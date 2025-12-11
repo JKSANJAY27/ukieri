@@ -59,10 +59,10 @@ export default function WorkshopsPage() {
                     className="text-center mb-24"
                 >
                     <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                        TECHNICAL <br /> IMMERSION
+                        Workshops & <br /> Exchange
                     </h1>
                     <p className="text-gray-400 text-xl font-light max-w-2xl mx-auto">
-                        Advanced hands-on training using state-of-the-art research facilities and equipment.
+                        Fostering global collaboration through student mobility and expert knowledge transfer.
                     </p>
                 </motion.div>
 
@@ -72,18 +72,19 @@ export default function WorkshopsPage() {
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-4xl font-bold mb-6 border-l-4 border-ukieri-blue pl-6">Hybrid Knowledge Exchange</h2>
-                        <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                            Bridging the geographical divide, our workshops combine physical presence with digital connectivity, allowing seamless interaction between students in India and experts in the UK.
-                        </p>
-                        <div className="flex gap-4">
-                            <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-lg">
-                                <div className="text-2xl font-bold text-white">03+</div>
-                                <div className="text-xs text-gray-400 uppercase">Sessions</div>
+                        <h2 className="text-4xl font-bold mb-8 border-l-4 border-emerald-500 pl-6 text-white">Student Exchange Program</h2>
+                        <div className="space-y-8">
+                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-colors">
+                                <h3 className="text-xl font-bold text-emerald-400 mb-2">UK to India (VIT)</h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    UK students visiting VIT for immersive training in <span className="text-white font-medium">biomass-based hydrogen generation</span> and varying feedstock analysis.
+                                </p>
                             </div>
-                            <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-lg">
-                                <div className="text-2xl font-bold text-white">100+</div>
-                                <div className="text-xs text-gray-400 uppercase">Attendees</div>
+                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-blue-500/50 transition-colors">
+                                <h3 className="text-xl font-bold text-blue-400 mb-2">India to UK (HWU)</h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    Indian students visiting Heriot-Watt University for advanced <span className="text-white font-medium">electrolyser prototyping</span> and Computational Fluid Dynamics (CFD) design.
+                                </p>
                             </div>
                         </div>
                     </motion.div>

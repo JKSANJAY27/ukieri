@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UK-India Hands-on Training Program",
-  description: "Catalyst Validation: From Laboratory Research to Prototype Demonstration for Electrolytic Hydrogen Generation",
+  title: "VIT-HWU-H2 | Research Capacity Building in Green Hydrogen",
+  description: "UK–India Partnership for Sustainable Energy Innovation - Advancing green hydrogen generation, storage, and workforce development.",
 };
 
 export default function RootLayout({
